@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import {connect} from 'react-redux'
+import initialize from '../data/game'
 
 /**
  * COMPONENT
  */
-export const Home = props => {
-  const {username} = props
+export const Home = ({username}) => {
+  useEffect(initialize, [])
 
   return (
     <div>
