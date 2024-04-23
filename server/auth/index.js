@@ -27,19 +27,18 @@ router.post('/signup', async (req, res, next) => {
 router.post('/highscore', async (req, res, next) => {
   try {
     // Replace 'userId' and 'score' with the actual property names sent by the client
-    const { username, score } = req.body;
-    console.log('BANANAS', score)
+    const { score, userId } = req.body;
+  
     // Assuming authentication and user ID retrieval has been handled earlier in the middleware
-    const user = await User.findOne({ where: { username: username } });
-    console.log('user', user);
-    if (user){
+    const user = await User.findOne({ where: { id: userId } });
+    if (score > user.dataValues.highscore) {
       await user.update({highscore: score})
       res.status(200).json(score)
     } else {
-      res.send('user not found')
+      res.send('try again next time pal')
     }
     // Send back the updated high score
-    //res.json({ highscore: updatedUser.highscore });
+    // res.json({ highscore: updatedUser.highscore });
   } catch (err) {
     // Handle errors, such as if the user is not found or the score is not a valid number
     next(err);

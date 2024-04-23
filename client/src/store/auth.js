@@ -1,5 +1,5 @@
-import axios from 'axios'
-import history from '../data/history'
+import axios from 'axios';
+import history from '../data/history';
 
 const TOKEN = 'token'
 
@@ -37,6 +37,36 @@ export const authenticate = (username, password, method) => async dispatch => {
     return dispatch(setAuth({error: authError}))
   }
 }
+
+export const updateHighScore = async (score) => {
+  const token = window.localStorage.getItem(TOKEN)
+  let user = '';
+  if (token) {
+    user = await axios.get('/auth/me', {
+      headers: {
+        authorization: token
+      }
+    })
+  }
+  const userId = user.data.id;
+  return await axios.post('/auth/highscore', {
+      score,
+      userId
+    });
+ }
+
+ export const fetchHighScore = async () => {
+  const token = window.localStorage.getItem(TOKEN)
+  let user = '';
+  if (token) {
+    user = await axios.get('/auth/me', {
+      headers: {
+        authorization: token
+      }
+    })
+  }
+  return user.data.highscore;
+ }
 
 export const logout = () => {
   window.localStorage.removeItem(TOKEN)

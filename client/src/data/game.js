@@ -1,4 +1,4 @@
-import { updateHighScore } from '../store/score'
+import { updateHighScore } from '../store/auth'
 
 export default function game() {
     /* set project up
@@ -10,11 +10,9 @@ export default function game() {
     invader destruction
     score
     */
-
     let scoring = document.querySelector('#score')
     let canvas = document.querySelector('canvas') //setting up project canvas
     let context = canvas.getContext('2d')
-    
 
     //setting up project canvas
 
@@ -289,7 +287,7 @@ export default function game() {
                     enemyBullets.splice(index, 1)
                     player.opacity = 0;
                     game.over = true;
-                    updateHighScore(score)
+                    updateHighScore(score);
                 }, 0)
                 setTimeout(() => {
                     game.active = false;
