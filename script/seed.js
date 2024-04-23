@@ -1,6 +1,6 @@
 'use strict'
 
-const {db, models: {User} } = require('../server/db')
+const {db, models: {User} } = require('../models/index')
 
 /**
  * seed - this function clears the database, updates tables to

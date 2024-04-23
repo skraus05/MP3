@@ -5,11 +5,9 @@
     "main": "server/index.js",
     "scripts": {
         "build": "cd client && npm run build",
-        "seed": "node script/seed.js",
         "start": "node server",
         "start:dev": "npm run start-server & npm run start-client",
         "start:dev:logger": "LOGGING=true npm run start:dev",
-        "start:dev:seed": "SEED=true npm run start:dev",
         "start-client": "cd client && npm install && npm run dev",
         "start-server": "JWT=shh nodemon server -e html,js,scss --ignore public --ignore client",
         "test": "NODE_ENV=test JWT=a_secret mocha \"./server/**/*.spec.js\" \"./client/**/*.spec.js\" --require @babel/register --require esm ",
@@ -21,7 +19,6 @@
     "license": "MIT",
     "dependencies": {
         "axios": "^0.21.1",
-        "bcrypt": "^5.0.0",
         "compression": "^1.7.3",
         "express": "^4.19.2",
         "history": "^4.9.0",
@@ -37,6 +34,7 @@
         "axios": "^0.21.1",
         "axios-mock-adapter": "^1.16.0",
         "babel-loader": "^8.2.2",
+        "bcrypt": "^5.1.1",
         "chai": "^4.2.0",
         "enzyme": "^3.9.0",
         "enzyme-adapter-react-16": "^1.12.1",

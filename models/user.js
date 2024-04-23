@@ -1,5 +1,7 @@
 "use strict";
 const { Model } = require("sequelize");
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     /**
@@ -15,6 +17,9 @@ module.exports = (sequelize, DataTypes) => {
     {
       username: DataTypes.STRING,
       password: DataTypes.STRING,
+      highscore: {
+        type: DataTypes.INTEGER
+      }
     },
     {
       sequelize,
@@ -39,6 +44,7 @@ module.exports = (sequelize, DataTypes) => {
    * classMethods
    */
   User.authenticate = async function ({ username, password }) {
+    console.log('user', username)
     const user = await this.findOne({ where: { username } });
     if (!user || !(await user.correctPassword(password))) {
       const error = Error("Incorrect username/password");
