@@ -34,7 +34,7 @@ router.post('/highscore', async (req, res, next) => {
     console.log('user', user);
     if (user){
       await user.update({highscore: score})
-      res.send(highscore)
+      res.status(200).json(score)
     } else {
       res.send('user not found')
     }
