@@ -1,7 +1,7 @@
 const { sequelize : db } = require('../models')
 const PORT = process.env.PORT || 8080
 const app = require('./app')
-const seed = require('../script/seed');
+//const seed = require('../script/seed');
 const { connect } = require('./api');
 
 const init = async () => {
