@@ -1,3 +1,5 @@
+import { updateHighScore } from '../store/score'
+
 export default function game() {
     /* set project up
     create controlled player
@@ -12,6 +14,7 @@ export default function game() {
     let scoring = document.querySelector('#score')
     let canvas = document.querySelector('canvas') //setting up project canvas
     let context = canvas.getContext('2d')
+    
 
     //setting up project canvas
 
@@ -286,6 +289,7 @@ export default function game() {
                     enemyBullets.splice(index, 1)
                     player.opacity = 0;
                     game.over = true;
+                    updateHighScore(score)
                 }, 0)
                 setTimeout(() => {
                     game.active = false;

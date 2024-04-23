@@ -28,7 +28,7 @@ router.post('/highscore', async (req, res, next) => {
   try {
     // Replace 'userId' and 'score' with the actual property names sent by the client
     const { username, score } = req.body;
-
+    console.log('BANANAS', score)
     // Assuming authentication and user ID retrieval has been handled earlier in the middleware
     const user = await User.findOne({ where: { username: username } });
     console.log('user', user);
