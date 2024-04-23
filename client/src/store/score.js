@@ -9,7 +9,7 @@ const updateScores = (score) => {
   };
 };
 
-// THUNKS
+/// THUNKS
 export const updateHighScore = (score) => async (dispatch) => {
   try {
     console.log('trucks', score)
