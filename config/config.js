@@ -1,5 +1,5 @@
 require("dotenv").config();
-modules.exports = {
+module.exports = {
   development: {
     username: "postgres",
     password: "Jal2f0rn!",
