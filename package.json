@@ -4,7 +4,7 @@
     "description": "Some boilerplate code to get you started - get shakin'!",
     "main": "server/index.js",
     "scripts": {
-        "build": "cd client && npm install && npm run build",
+        "build": "npm install",
         "start": "node server",
         "start:dev": "npm run start-server & npm run start-client",
         "start:dev:logger": "LOGGING=true npm run start:dev",
