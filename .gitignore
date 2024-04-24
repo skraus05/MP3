@@ -9,6 +9,7 @@ remove_postgres.sh
 
 # Environment configuration
 .env
+*.env*
 
 # Logs
 logs
