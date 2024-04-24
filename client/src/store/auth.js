@@ -38,6 +38,8 @@ export const authenticate = (username, password, method) => async dispatch => {
   }
 }
 
+
+
 export const updateHighScore = async (score) => {
   const token = window.localStorage.getItem(TOKEN)
   let user = '';
