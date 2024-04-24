@@ -30,6 +30,18 @@ app.use((req, res, next) => {
   }
 })
 
+app.use((req, res, next) => {
+  res.setHeader(
+     'Access-Control-Allow-Origin',
+    'https://starstryker.onrender.com'
+   );
+  res.setHeader(
+    'Access-Control-Allow-Headers',
+    'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+  );
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+});
+
 // sends index.html
 app.use('*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', 'public/index.html'));
