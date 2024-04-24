@@ -1,3 +1,92 @@
-node_modules
-node_modules
+# Dependency directories
+node_modules/
+
+# Build outputs
+build/Release
+
+# Scripts
 remove_postgres.sh
+
+# Environment configuration
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+
+# Coverage reports
+coverage
+.nyc_output
+lib-cov
+
+# Cache directories
+.cache
+.parcel-cache
+.npm
+.eslintcache
+.yarn-integrity
+
+# Build directories
+.next
+out
+.nuxt
+dist
+public/  # If Gatsby, uncomment this line
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+jspm_packages/
+
+# TypeScript declaration files
+typings/
+
+# Package files
+*.tgz
+
+# Backup & temp files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# IDE/Editor directories
+.idea/
+.vscode/
+
+# Instrumentation libs
+lib-cov
+
+# Bower dependencies
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# Grunt intermediate storage
+.grunt
+
+# REPL history
+.node_repl_history
