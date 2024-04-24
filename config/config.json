@@ -14,11 +14,11 @@
     "dialect": "mysql"
   },
   "production": {
-    "username": "process.env.DB_USERNAME",
-    "password": "process.env.DB_PASSWORD",
-    "database": "process.env.DB_NAME",
-    "host": "process.env.DB_HOST",
-    "port": "process.env.DB_PORT",
+    "username": "please_work_a1ub_user",
+    "password": "FwqSuNAryiE0X7im2NWqCjpEzevLflB1",
+    "database": "please_work_a1ub",
+    "host": "dbpg-co5kh9md3nmc7394bmtg-a",
+    "port": 5432,
     "dialect": "postgres"
   }
 }
