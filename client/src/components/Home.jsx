@@ -17,7 +17,7 @@ export const Home = ({username}) => {
     <div>
       <h3>Welcome, {username}</h3>
       <p>    
-    <span>Current Score:</span> <span id="score">0</span>
+    <span>Current Score:</span> <span id="score">0  </span>
     <span>High Score:</span> <span id="score">0</span>
     </p>
     <canvas width="1920" height="950">
