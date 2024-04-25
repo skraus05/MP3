@@ -1,10 +1,12 @@
 require('dotenv').config()
 const { sequelize : db } = require('../models')
-const PORT = process.env.PORT || 8080
+const port = process.env.PORT || 4000
 const app = require('./app')
 //const seed = require('../script/seed');
 const { connect } = require('./api');
-
+const express = require('express')
+const app = express()
+;
 
 
 const init = async () => {
@@ -32,3 +34,4 @@ const init = async () => {
 }
 
 init()
+
