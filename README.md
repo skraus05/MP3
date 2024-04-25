@@ -69,4 +69,4 @@ npm start
 
 - Samuel Krauss
 - Kolby Kiernan
-- Jaocb Daley
+- Jacob Daley
