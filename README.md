@@ -17,7 +17,6 @@ This project is built with the PERN stack:
 
 ## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. 
 
 ### Prerequisites
 
@@ -31,7 +30,6 @@ PostgreSQL
 
 ### Installing
 
-A step-by-step series of examples that tell you how to get a development environment running.
 
 #### Setting up the database
 
@@ -59,21 +57,13 @@ npm start
 
 ## Usage
 
-Brief examples of how to use the project or features you can access after setup.
+
 
 ## Contributing
 
-Instructions on how to contribute to the project. This can include:
-
-- Forking the project
-- Creating your feature branch (`git checkout -b feature/AmazingFeature`)
-- Committing your changes (`git commit -m 'Add some AmazingFeature'`)
-- Pushing to the branch (`git push origin feature/AmazingFeature`)
-- Opening a Pull Request
 
 ## License
 
-This project is licensed under the [LICENSE-NAME] License - see the [LICENSE.md](LICENSE.md) file for details.
 
 ## Acknowledgments
 
